@@ -27,6 +27,8 @@ echo "listing /usr/bin"
 ls -la /usr/bin
 echo "listing /bin"
 ls -la /bin
+echo "running xmlpatterns"
+xmlpatterns
 
 exit 1
 
