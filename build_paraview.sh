@@ -21,16 +21,8 @@ PARAVIEW_CMAKE_VARIABLES="-D CMAKE_BUILD_TYPE=Release -D BUILD_TESTING=OFF -D Mo
 
 # debug output
 # TODO: remove
-echo "looking for xmlpatterns"
-dpkg --listfiles libqt4-dev | tr '\n' '\0' | xargs -0 -n1 stat -c "%a %n"
-echo "listing /usr/bin"
-ls -la /usr/bin
-echo "listing /bin"
-ls -la /bin
-echo "running xmlpatterns"
-xmlpatterns
 echo "looking literally everywhere for xmlpatterns."
-find / -iregex ".*?xmlpatterns.*?" 2>&1 | grep -v "Permission denied" | tr '\n' '\0' | xargs -0 -n1 stat -c "%a %n"
+find / -iregex ".*?xmlpatterns.*?" 2>&1 | grep -v "Permission denied" | tr '\n' '\0' | xargs -0 -n1 stat -c "%F - %a: %n"
 
 exit 1
 
