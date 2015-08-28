@@ -23,7 +23,9 @@ PARAVIEW_CMAKE_VARIABLES="-D CMAKE_BUILD_TYPE=Release -D BUILD_TESTING=OFF -D Mo
 # TODO: remove
 echo "looking for xmlpatterns"
 dpkg --listfiles libqt4-dev | tr '\n' '\0' | xargs -0 -n1 stat -c "%a %n"
+ls -la /usr/bin
 
+exit 1
 
 # ensure bin_dir exists
 if [ ! -d $BIN_DIR ];
