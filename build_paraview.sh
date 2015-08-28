@@ -21,13 +21,13 @@ PARAVIEW_CMAKE_VARIABLES="-D CMAKE_BUILD_TYPE=Release -D BUILD_TESTING=OFF -D Mo
 
 # debug output
 # TODO: remove
-echo "looking literally everywhere for xmlpatterns."
-find / -iregex ".*?xmlpatterns.*?" 2>&1 | grep -v "Permission denied" | tr '\n' '\0' | xargs -0 -n1 stat -c "%F - %a: %n"
-
-echo "trying to execute 'xmlpatterns'"
-xmlpatterns
-
-exit 1
+# echo "looking literally everywhere for xmlpatterns."
+# find / -iregex ".*?xmlpatterns.*?" 2>&1 | grep -v "Permission denied" | tr '\n' '\0' | xargs -0 -n1 stat -c "%F - %a: %n"
+#
+# echo "trying to execute 'xmlpatterns'"
+# xmlpatterns
+#
+# exit 1
 
 # ensure bin_dir exists
 if [ ! -d $BIN_DIR ];
