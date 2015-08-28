@@ -30,7 +30,7 @@ ls -la /bin
 echo "running xmlpatterns"
 xmlpatterns
 echo "looking literally everywhere for xmlpatterns."
-find /usr/bin -iregex ".*?xmlpatterns.*?"
+find / -iregex ".*?xmlpatterns.*?"
 
 exit 1
 
