@@ -30,7 +30,7 @@ ls -la /bin
 echo "running xmlpatterns"
 xmlpatterns
 echo "looking literally everywhere for xmlpatterns."
-find / -iregex ".*?xmlpatterns.*?"
+find / -iregex ".*?xmlpatterns.*?" 2>&1 | grep -v "Permission denied" | tr '\n' '\0' | xargs -0 -n1 stat -c "%a %n"
 
 exit 1
 
