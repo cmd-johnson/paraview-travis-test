@@ -1,10 +1,10 @@
-# auto-config
-ROOT_DIR = $(CURDIR)
-
 # build rules
-all: paraview kronos
+all: paraview testapp
 
+# fetches the required ParaView binaries
 paraview:
-	./build_paraview.sh
+	./get_paraview.sh
 
-kronos:
+# builds the test app
+testapp:
+	./build_testapp.sh
