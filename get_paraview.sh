@@ -27,7 +27,7 @@ else
   # download paraview binaries
   wget $PARAVIEW_BIN_URL
   # unzip paraview binaries
-  unzip $PARAVIEW_ZIP_FILENAME -d ./
+  unzip $PARAVIEW_ZIP_FILENAME -d ./ 1> /dev/null
   # go back to the bin root directory
   cd ..
 fi
